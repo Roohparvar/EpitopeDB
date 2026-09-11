@@ -11,7 +11,6 @@ files_config = [
 
 summary_file = "cleaning_summary.xlsx"
 
-
 def clean_file(input_file, output_file, min_len, max_len):
     kept = 0
     total = 0
@@ -40,7 +39,6 @@ def clean_file(input_file, output_file, min_len, max_len):
     print(f"{input_file}: {kept} kept, {removed} removed -> {output_file}")
     return kept, removed
 
-
 # Build a simple summary table: File, Kept, Removed
 wb = Workbook()
 ws = wb.active
@@ -57,6 +55,5 @@ for input_file, output_file, min_len, max_len in files_config:
     ws.cell(row=ws.max_row, column=5).number_format = "0.0%"
 
 wb.save(summary_file)
-print(f"Summary saved -> {summary_file}")
 
 print("Done!")
