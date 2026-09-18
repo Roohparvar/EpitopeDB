@@ -19,5 +19,3 @@ function calculateAromaticResiduePercentage($sequence)
 
     return ($count / $length) * 100;
 }
-
-?>

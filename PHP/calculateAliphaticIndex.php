@@ -23,5 +23,3 @@ function calculateAliphaticIndex($sequence)
     return $xA + (2.9 * $xV) + (3.9 * ($xI + $xL));
 }
 
-?>
-
