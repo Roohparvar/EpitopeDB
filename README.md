@@ -9,6 +9,7 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateAtoms.php` | Calculates the atomic composition (`C`, `H`, `N`, `O`, and `S`) of a complete neutral peptide. |
 | `calculateBasicResidue.php` | Calculates the count and percentage of basic residues: lysine, arginine, and histidine (`K`, `R`, and `H`). |
 | `calculateExtinctionCoefficient.php` | Calculates the reduced and oxidized molar extinction coefficients of a peptide at 280 nm. |
+| `calculateGRAVY.php` | Calculates the grand average of hydropathicity using the Kyte–Doolittle scale. |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
