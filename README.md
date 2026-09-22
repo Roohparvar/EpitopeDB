@@ -10,6 +10,7 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateBasicResidue.php` | Calculates the count and percentage of basic residues: lysine, arginine, and histidine (`K`, `R`, and `H`). |
 | `calculateExtinctionCoefficient.php` | Calculates the reduced and oxidized molar extinction coefficients of a peptide at 280 nm. |
 | `calculateGRAVY.php` | Calculates the grand average of hydropathicity using the Kyte–Doolittle scale. |
+| `calculateHydrophilicity.php` | Calculates the mean sequence hydrophilicity using the Hopp–Woods scale. |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
