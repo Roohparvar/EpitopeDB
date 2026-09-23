@@ -13,6 +13,8 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateHydrophilicity.php` | Calculates the mean sequence hydrophilicity using the Hopp–Woods scale. |
 | `calculateHydrophobicResidues.php` | Calculates the count and percentage of hydrophobic residues (`A`, `V`, `I`, `L`, `M`, `F`, `W`, and `Y`). |
 | `calculateMass.php` | Calculates peptide molecular weight and mean residue mass using residue masses and the mass of water. |
+| `calculateNetCharge.php` | Calculates peptide net charge at a specified pH; used for theoretical pI estimation and net charge calculation at pH 7.4. |
+| `calculateTheoreticalPI.php` | Calculates the theoretical isoelectric point (pI) of a peptide using its net charge. |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
