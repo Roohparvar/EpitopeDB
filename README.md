@@ -16,6 +16,7 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateNetCharge.php` | Calculates peptide net charge at a specified pH; used for theoretical pI estimation and net charge calculation at pH 7.4. |
 | `calculateTheoreticalPI.php` | Calculates the theoretical isoelectric point (pI) of a peptide using its net charge. |
 | `calculatePolarComposition.php` | Calculates polar and non-polar residue counts and their per-residue values. |
+| `calculateResidueSizeComposition.php` | Calculates the counts and percentages of residues in the three normalized van der Waals volume groups. |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
