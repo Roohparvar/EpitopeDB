@@ -17,6 +17,7 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateTheoreticalPI.php` | Calculates the theoretical isoelectric point (pI) of a peptide using its net charge. |
 | `calculatePolarComposition.php` | Calculates polar and non-polar residue counts and their per-residue values. |
 | `calculateResidueSizeComposition.php` | Calculates the counts and percentages of residues in the three normalized van der Waals volume groups. |
+| `calculateShannonEntropy.php` | Calculates both raw and length-normalized Shannon entropy of an epitope sequence. |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
