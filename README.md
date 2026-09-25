@@ -19,6 +19,7 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateResidueSizeComposition.php` | Calculates the counts and percentages of residues in the three normalized van der Waals volume groups. |
 | `calculateShannonEntropy.php` | Calculates both raw and length-normalized Shannon entropy of an epitope sequence. |
 | `calculateSulfurContainingResidues.php` | Calculates the count and percentage of sulfur-containing residues (C and M) in an epitope sequence. |
+| `calculateHydroxylResidues.php` | Calculates the count and percentage of hydroxyl-containing residues (S and T) in an epitope sequence. |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
