@@ -51,3 +51,24 @@ function calculateAtoms($sequence)
 
     return $atoms;
 }
+
+
+function calculateAtomsPerResidue($atoms, $length)
+{
+    if($length === 0){
+        return ['C' => 0, 'H' => 0, 'N' => 0, 'O' => 0, 'S' => 0, 'total' => 0];
+    }
+
+    /* Remove terminal H2O to obtain residue-only atomic composition before dividing by length. */
+    $residueAtoms = ['C' => $atoms['C'], 'H' => $atoms['H'] - 2, 'N' => $atoms['N'], 'O' => $atoms['O'] - 1, 'S' => $atoms['S']];
+    $totalResidueAtoms = $residueAtoms['C'] + $residueAtoms['H'] + $residueAtoms['N'] + $residueAtoms['O'] + $residueAtoms['S'];
+
+    return [
+        'C' => $residueAtoms['C'] / $length,
+        'H' => $residueAtoms['H'] / $length,
+        'N' => $residueAtoms['N'] / $length,
+        'O' => $residueAtoms['O'] / $length,
+        'S' => $residueAtoms['S'] / $length,
+        'total' => $totalResidueAtoms / $length
+    ];
+}
