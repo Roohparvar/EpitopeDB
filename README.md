@@ -24,6 +24,7 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateHydrogenAcceptorResidues.php` | Calculates the count and percentage of hydrogen-bond acceptor residues (D and E). |
 | `calculateHydrogenDonorAcceptorResidues.php` | Calculates the count and percentage of residues that act as both hydrogen-bond donors and acceptors (N, Q, H, S, T and Y). |
 | `calculateHydrogenDonorResidues.php` | Calculates the count and percentage of hydrogen-bond donor residues (R, K and W). |
+| `calculateHydrogenNeitherResidues.php` | Calculates the count and percentage of residues classified as neither hydrogen-bond donors nor acceptors (A, C, G, I, L, M, F, P and V). |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
