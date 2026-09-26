@@ -22,6 +22,7 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateHydroxylResidues.php` | Calculates the count and percentage of hydroxyl-containing residues (S and T) in an epitope sequence. |
 | `calculateAmideResidues.php` | Calculates the count and percentage of amide-containing residues (N and Q) in an epitope sequence. |
 | `calculateHydrogenAcceptorResidues.php` | Calculates the count and percentage of hydrogen-bond acceptor residues (D and E). |
+| `calculateHydrogenDonorAcceptorResidues.php` | Calculates the count and percentage of residues that act as both hydrogen-bond donors and acceptors (N, Q, H, S, T and Y). |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
