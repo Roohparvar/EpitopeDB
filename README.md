@@ -21,7 +21,7 @@ A collection of PHP functions for assessing whether a user-provided epitope is s
 | `calculateSulfurContainingResidues.php` | Calculates the count and percentage of sulfur-containing residues (C and M) in an epitope sequence. |
 | `calculateHydroxylResidues.php` | Calculates the count and percentage of hydroxyl-containing residues (S and T) in an epitope sequence. |
 | `calculateAmideResidues.php` | Calculates the count and percentage of amide-containing residues (N and Q) in an epitope sequence. |
-
+| `calculateHydrogenAcceptorResidues.php` | Calculates the count and percentage of hydrogen-bond acceptor residues (D and E). |
 
 ## Input
 Functions expect peptide sequences containing uppercase standard amino-acid codes.
