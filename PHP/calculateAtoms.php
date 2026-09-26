@@ -26,17 +26,12 @@ function getAtomicComposition()
     ];
 }
 
+
 function calculateAtoms($sequence)
 {
     $table = getAtomicComposition();
 
-    $atoms = [
-        'C' => 0,
-        'H' => 0,
-        'N' => 0,
-        'O' => 0,
-        'S' => 0
-    ];
+    $atoms = ['C'=>0, 'H'=>0, 'N'=>0, 'O'=>0, 'S'=>0];
 
     foreach(str_split($sequence) as $aa){
         foreach($atoms as $atom => $value){
@@ -45,7 +40,6 @@ function calculateAtoms($sequence)
     }
 
     /* Add H2O to convert residue composition into complete neutral peptide composition. */
-
     $atoms['H'] += 2;
     $atoms['O'] += 1;
 
@@ -56,19 +50,20 @@ function calculateAtoms($sequence)
 function calculateAtomsPerResidue($atoms, $length)
 {
     if($length === 0){
-        return ['C' => 0, 'H' => 0, 'N' => 0, 'O' => 0, 'S' => 0, 'total' => 0];
+        return ['C' => 0, 'H' => 0, 'N' => 0, 'O' => 0, 'total' => 0];
     }
 
-    /* Remove terminal H2O to obtain residue-only atomic composition before dividing by length. */
+    /*
+       Remove terminal H2O to obtain residue-only
+       atomic composition before dividing by length.
+       
+       Sulfur remains included internally in the
+       total atom calculation but is not returned
+       as a separate feature.
+    */
+
     $residueAtoms = ['C' => $atoms['C'], 'H' => $atoms['H'] - 2, 'N' => $atoms['N'], 'O' => $atoms['O'] - 1, 'S' => $atoms['S']];
     $totalResidueAtoms = $residueAtoms['C'] + $residueAtoms['H'] + $residueAtoms['N'] + $residueAtoms['O'] + $residueAtoms['S'];
 
-    return [
-        'C' => $residueAtoms['C'] / $length,
-        'H' => $residueAtoms['H'] / $length,
-        'N' => $residueAtoms['N'] / $length,
-        'O' => $residueAtoms['O'] / $length,
-        'S' => $residueAtoms['S'] / $length,
-        'total' => $totalResidueAtoms / $length
-    ];
+    return ['C' => $residueAtoms['C'] / $length, 'H' => $residueAtoms['H'] / $length, 'N' => $residueAtoms['N'] / $length, 'O' => $residueAtoms['O'] / $length, 'total' => $totalResidueAtoms / $length];
 }
