@@ -1,7 +1,7 @@
 <?php
 
-/* ========================================================= NON-HYDROGEN-DONOR/ACCEPTOR RESIDUES A + C + G + I + L + M + F + P + V ========================================================= */
-function calculateHydrogenNeitherResidues($sequence){
+function calculateHydrogenNeitherResidues($sequence)
+{
     $length = strlen($sequence);
 
     if($length === 0){
@@ -19,7 +19,8 @@ function calculateHydrogenNeitherResidues($sequence){
         + substr_count($sequence, 'P')
         + substr_count($sequence, 'V');
 
-    return ['count' => $count, 'percentage' => ($count / $length) * 100];
+    return [
+        'count' => $count,
+        'percentage' => ($count / $length) * 100
+    ];
 }
-
-
